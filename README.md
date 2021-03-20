@@ -11,9 +11,10 @@ bot.loadPlugin(require('chatregex'))
 
 bot.on('spawn', () => {
   bot.chatregex.addPatternSet('helloworld', [/<.+> Hello(.+)/, /<.+> World(.+)/], { repeat: true })
-  bot.chatregex.on('helloworld', (matches) => {
+})
+
+bot.on('chat:helloworld', (matches) => {
     console.log(matches)
-  })
 })
 ```
 In chat:
@@ -40,5 +41,5 @@ Output:
 
 #### Events
 
-##### "{name}" (matches) - emitted when all patterns are matched
+##### "chat:{name}" (matches) - emitted when all patterns are matched, this event is on the bot object
 - matches - (Array\<string>) array of matches

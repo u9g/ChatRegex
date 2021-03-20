@@ -1,10 +1,10 @@
-const EventEmitter = require('events')
-
 function inject (bot) {
   const _chatregex = []
-  bot.chatregex = new EventEmitter()
-  bot.chatregex.addPatternSet = (name, patterns, { repeat, parse }) => {
-    _chatregex.push({ name, patterns, position: 0, matches: [], repeat, parse })
+
+  bot.chatregex = {
+    addPatternSet: (name, patterns, { repeat, parse }) => {
+      _chatregex.push({ name, patterns, position: 0, matches: [], repeat, parse })
+    }
   }
 
   const getChatMap = () => _chatregex.map(({ patterns, position: ix }) => patterns[ix])
@@ -22,9 +22,9 @@ function inject (bot) {
       if (_chatregex[ix].parse) {
         const matches = _chatregex[ix].patterns.map((pattern, i) => _chatregex[ix].matches[i].match(pattern))
         matches.forEach(o => o.splice(0, 1)) // delete full message match
-        bot.chatregex.emit(_chatregex[ix].name, matches)
+        bot.emit(`chat:${_chatregex[ix].name}`, matches)
       } else {
-        bot.chatregex.emit(_chatregex[ix].name, _chatregex[ix].matches)
+        bot.emit(`chat:${_chatregex[ix].name}`, _chatregex[ix].matches)
       }
 
       // run again

@@ -2,6 +2,10 @@
 
 This package is a plugin for mineflayer to allow for matching a series of regex paterns.
 
+# Installation:
+
+`npm i chatregex`
+
 ## Example:
 
 ```js

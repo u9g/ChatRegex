@@ -22,7 +22,7 @@ In chat:
 <U9G> World2
 ```
 Output:
-`['<U9G> Hello1'], ['<U9G> World2']]`
+`[['<U9G> Hello1'], ['<U9G> World2']]`
   
 ## API
 

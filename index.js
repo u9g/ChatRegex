@@ -3,7 +3,7 @@ const EventEmitter = require('events')
 function inject (bot) {
   const _chatregex = []
   bot.chatregex = new EventEmitter()
-  bot.chatregex.addNew = (name, patterns, { repeat, parse }) => {
+  bot.chatregex.addPatternSet = (name, patterns, { repeat, parse }) => {
     _chatregex.push({ name, patterns, position: 0, matches: [], repeat, parse })
   }
 

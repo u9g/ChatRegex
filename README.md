@@ -10,7 +10,7 @@ const bot = mineflayer.createBot()
 bot.loadPlugin(require('./plugin.js'))
 
 bot.on('spawn', () => {
-  bot.chatregex.addNew('helloworld', [/<.+> Hello(.+)/, /<.+> World(.+)/], { repeat: true, parse: true })
+  bot.chatregex.addPatternSet('helloworld', [/<.+> Hello(.+)/, /<.+> World(.+)/], { repeat: true, parse: true })
   bot.chatregex.on('helloworld', (matches) => {
     console.log(matches)
   })
@@ -36,4 +36,9 @@ Output:
 
 `options` - (object) optional
 - repeat - (boolean) whether to emit this event multiple times, default is false
-- parse - (boolean) whether to only emit the capture groups gotten from the matches, default is falsee
+- parse - (boolean) whether to only emit the capture groups gotten from the matches, default is false
+
+#### Events
+
+##### "{name}" (matches) - emitted when all patterns are matched
+- matches - (Array\<string>) array of matches

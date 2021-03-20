@@ -32,7 +32,7 @@ Output:
 
 `name` - (string) name of the event emitted when the set is fully matched
 
-`patterns` - (Array\<RegExp>) array of regex patterns to match befor emitting matches
+`patterns` - (Array\<RegExp>) array of regex patterns to match before emitting matches
 
 `options` - (object) optional
 - repeat - (boolean) whether to emit this event multiple times, default is false

@@ -21,5 +21,8 @@
   "bugs": {
     "url": "https://github.com/u9g/chatregex/issues"
   },
-  "homepage": "https://github.com/u9g/chatregex#readme"
+  "homepage": "https://github.com/u9g/chatregex#readme",
+  "dependencies": {
+    "mineflayer": "^3.3.3"
+  }
 }

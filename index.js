@@ -29,8 +29,8 @@ function inject (bot) {
 
       // run again
       if (!_chatregex[ix].repeat) {
-        _chatregex.position = 0
-        _chatregex.matches = []
+        _chatregex[ix].position = 0
+        _chatregex[ix].matches = []
       } else {
         _chatregex.splice(ix, 1)
       }

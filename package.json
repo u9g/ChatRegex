@@ -1,0 +1,25 @@
+{
+  "name": "chatregex",
+  "version": "1.0.0",
+  "description": "A plugin for mineflayer to allow for matching a series of regex paterns",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/u9g/chatregex.git"
+  },
+  "keywords": [
+    "mineflayer",
+    "minecraft",
+    "chat",
+    "regex"
+  ],
+  "author": "u9g <winworkswow@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/u9g/chatregex/issues"
+  },
+  "homepage": "https://github.com/u9g/chatregex#readme"
+}

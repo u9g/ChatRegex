@@ -7,7 +7,7 @@ This package is a plugin for mineflayer to allow for matching a series of regex 
 ```js
 const mineflayer = require('mineflayer')
 const bot = mineflayer.createBot()
-bot.loadPlugin(require('./plugin.js'))
+bot.loadPlugin(require('chatregex'))
 
 bot.on('spawn', () => {
   bot.chatregex.addPatternSet('helloworld', [/<.+> Hello(.+)/, /<.+> World(.+)/], { repeat: true, parse: true })

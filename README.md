@@ -10,7 +10,7 @@ const bot = mineflayer.createBot()
 bot.loadPlugin(require('chatregex'))
 
 bot.on('spawn', () => {
-  bot.chatregex.addPatternSet('helloworld', [/<.+> Hello(.+)/, /<.+> World(.+)/], { repeat: true, parse: true })
+  bot.chatregex.addPatternSet('helloworld', [/<.+> Hello(.+)/, /<.+> World(.+)/], { repeat: true })
   bot.chatregex.on('helloworld', (matches) => {
     console.log(matches)
   })

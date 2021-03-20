@@ -1,6 +1,6 @@
 {
   "name": "chatregex",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "A plugin for mineflayer to allow for matching a series of regex paterns",
   "main": "index.js",
   "scripts": {
